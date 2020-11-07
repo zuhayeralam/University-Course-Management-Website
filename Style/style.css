@@ -1,0 +1,599 @@
+:root {
+  --primary-color: #123c69;
+  --secondary-color: #edc7b7;
+  --dark-secondary-color: #ac3b61;
+  --light-secondary-color: #eee2dc;
+  --max-width: 1200px;
+  --Primary-font: "Alef", sans-serif;
+  --secondary-font: Verdana, Geneva, Tahoma, sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul {
+  list-style: none;
+}
+/* Background Wallpapers */
+#unit-details-body {
+  /* Photo by Will van Wingerden on Unsplash https://unsplash.com/photos/dsvJgiBJTOs */
+  background: url(../img/will-van-wingerden-dsvJgiBJTOs-unsplash.jpg) center
+    center/cover;
+}
+#unit-enrollment-body {
+  /* Photo by Annie Spratt on Unsplash https://unsplash.com/photos/lIWF2uHxs0Q */
+  background: url(../img/annie-spratt-lIWF2uHxs0Q-unsplash.jpg) center
+    center/cover;
+}
+#reg-body {
+  /* Photo by Freddy Do on Unsplash https://unsplash.com/photos/n0OZf2p8PVM */
+  background: url(../img/freddy-do-n0OZf2p8PVM-unsplash.jpg) center center/cover;
+}
+#home-body {
+  /* Photo by Charles Büchler on Unsplash. Source:https://unsplash.com/photos/ccCvDtWNyes */
+  background: url(../img/charles-buchler-ccCvDtWNyes-unsplash.jpg) center
+    center/cover;
+}
+/* Button designing */
+.buttonlight {
+  display: block;
+  color: var(--dark-secondary-color);
+  text-align: center;
+  font-family: var(--Primary-font);
+  font-size: 1.2rem;
+  font-weight: bold;
+  background-color: var(--secondary-color);
+  border-radius: 0.3rem;
+  transition: all ease-in-out 0.3s;
+}
+.buttonlight:hover {
+  background-color: var(--dark-secondary-color);
+  color: var(--secondary-color);
+}
+.tableedit-button {
+  border: 2px var(--primary-color) solid;
+  padding: 0 0.5rem;
+  margin-left: 0.3rem;
+}
+.tableedit-button2 {
+  border: 2px var(--primary-color) solid;
+  padding: 0.3rem;
+  margin: 0.3rem auto;
+}
+.addsearch-button {
+  border: 5px var(--secondary-color) solid;
+  background-color: var(--primary-color);
+  color: var(--light-secondary-color);
+  padding: 0.5rem 1rem;
+  margin-left: 0.1rem;
+}
+#toggleButtonTwo {
+  display: inline;
+}
+#scrollTopBtn{
+display: none;
+position: fixed; /* Fixed/sticky position */
+bottom: 20px; /* Place the button at the bottom of the page */
+right: 30px; /* Place the button 30px from the right */
+z-index: 99; /* Make sure it does not overlap */
+border: none; /* Remove borders */
+outline: none; /* Remove outline */
+cursor: pointer; /* Add a mouse pointer on hover */
+padding: 15px; /* Some padding */
+border-radius: 10px; /* Rounded corners */
+font-size: 1rem; /* Increase font size */
+}
+/* page title card design */
+.page-top-card {
+  width: 100%;
+  text-align: center;
+  padding: 2rem 3rem;
+  font-size: 1.5rem;
+  margin: 1rem auto;
+  background-color: var(--primary-color);
+  color: var(--light-secondary-color);
+  font-family: var(--Primary-font);
+  opacity: 0.9;
+}
+/* All table design */
+.table-top-card {
+  width: fit-content;
+  text-align: center;
+  padding: 1.5rem 2rem;
+  font-size: 1.5rem;
+  margin: 1rem auto;
+  background-color: var(--primary-color);
+  color: var(--light-secondary-color);
+  font-family: var(--Primary-font);
+  border-radius: 1rem;
+}
+.primary-table {
+  margin: 1rem auto;
+  background-color: var(--light-secondary-color);
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  width: 90%;
+  border-radius: 10px 10px 0 0;
+  overflow: hidden;
+}
+
+.result-table .primary-table {
+  border-collapse: initial;
+  border: 3px solid var(--primary-color);
+  border-radius: 10px;
+}
+.result-table .primary-table tr td:first-child {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+.primary-table thead tr {
+  background-color: var(--primary-color);
+  color: var(--light-secondary-color);
+  text-align: left;
+  font-weight: bold;
+  font-family: var(--Primary-font);
+}
+.primary-table th,
+.primary-table td {
+  padding: 12px 15px;
+}
+.primary-table tbody tr {
+  border-bottom: 1px solid var(--light-secondary-color);
+  font-family: var(--secondary-font);
+}
+.primary-table tbody tr:nth-of-type(even) {
+  background-color: var(--secondary-color);
+}
+.primary-table tbody tr:nth-of-type(odd):hover {
+  background-color: var(--secondary-color);
+}
+
+.primary-table tbody tr:last-of-type {
+  border-bottom: 5px solid var(--primary-color);
+}
+/* styling for card that is shown when a table is empty */
+.emptyrecord {
+  width: 80%;
+  border-radius: 0.5rem;
+  text-align: center;
+  padding: 2rem 3rem;
+  font-size: 1.5rem;
+  margin: 1rem auto;
+  background-color: var(--dark-secondary-color);
+  color: var(--light-secondary-color);
+  font-family: var(--Primary-font);
+}
+/* Navigation Bar */
+nav a {
+  color: var(--secondary-color);
+  font-size: 1.5rem;
+}
+#navigation-bar .container {
+  max-width: var(--max-width);
+  margin: auto;
+  overflow: hidden;
+}
+#navigation-bar {
+  background: var(--primary-color);
+  width: 100%;
+}
+#navigation-bar .container {
+  padding-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 0.2rem var(--secondary-color) solid;
+}
+/* navigation bar logo */
+nav img {
+  padding-top: 1rem;
+  margin: auto;
+}
+/* navigation bar list items */
+nav ul {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 0.8rem;
+}
+nav li {
+  position: relative;
+  font-family: var(--Primary-font);
+}
+nav li a:hover {
+  color: var(--dark-secondary-color);
+}
+/* can be used to highlight link of the current page */
+.current {
+  color: var(--dark-secondary-color);
+}
+/* footer */
+footer {
+  border-top: var(--secondary-color) 5px solid;
+  width: 100%;
+  background-color: var(--primary-color);
+}
+.footer-bottom {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+main {
+  /* this keeps the footer at bottom */
+  flex: 1;
+}
+/* footer button "back to top" */
+footer .buttonlight {
+  margin: auto;
+  margin-top: 1rem;
+  width: 9rem;
+  padding: 1rem;
+}
+.footer-text {
+  margin-top: 1rem;
+  text-align: center;
+  color: var(--secondary-color);
+  font-family: var(--secondary-font);
+}
+/* style for the sliding effect and its components*/
+.slidin-body {
+  background: var(--light-secondary-color);
+}
+.slidin-form {
+  margin: auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  background-color: var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  padding: 1rem 0.5rem;
+  border-radius: 0.8rem;
+  color: var(--secondary-color);
+}
+.slidin-form img {
+  width: 8rem;
+  margin-bottom: 2rem;
+}
+.slidin-form h3 {
+  text-align: center;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+  font-family: var(--Primary-font);
+  font-size: 2rem;
+}
+.slidin-form .input-group label {
+  font-size: 1.2rem;
+  font-family: var(--Primary-font);
+}
+.slidin-form .input-group input,
+.slidin-form .input-group textarea,
+.slidin-form .input-group select {
+  width: 100%;
+  padding: 0.1rem 0;
+  font-size: 2rem;
+  font-family: var(--secondary-font);
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+  border: none;
+  outline: none;
+  border-radius: 0.2rem;
+  border: var(--dark-secondary-color) 0.2rem solid;
+  background-color: var(--secondary-color);
+  color: var(--dark-secondary-color);
+}
+.slidin-form .input-group input:focus {
+  background-color: var(--light-secondary-color);
+}
+.slidin-form .buttonlight {
+  width: 50%;
+  height: 4rem;
+  border: none;
+  border: var(--dark-secondary-color) 2px solid;
+}
+.slidin-form p {
+  margin-top: 1rem;
+  font-family: var(--Primary-font);
+  font-size: 1.3rem;
+  text-align: center;
+}
+.slidin-form p a {
+  text-decoration: underline;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+.slidin-form p a:hover {
+  color: var(--dark-secondary-color);
+}
+
+#adddescription:focus {
+  padding: 0;
+  font-size: 1rem;
+  height: 20rem;
+}
+/* slideToggle css */
+#toggleMe,
+#toggleMeTwo,
+#toggleMeOne,
+#toggleMeFour,
+#toggleMeFive,
+#toggleMeThree {
+  transition: height 0.25s ease;
+  overflow: hidden;
+}
+#toggleMe:not(.active),
+#toggleMeOne:not(.active),
+#toggleMeFour:not(.active),
+#toggleMeTwo:not(.active),
+#toggleMeFive:not(.active),
+#toggleMeThree:not(.active) {
+  display: none;
+}
+/* WELCOME PAGE */
+.welcome {
+  background-color: var(--primary-color);
+  width: 90%;
+  height: fit-content;
+  margin: auto;
+  margin-bottom: 2rem;
+  position: relative;
+  top: 1.4rem;
+  color: var(--secondary-color);
+  text-align: center;
+  font-size: 1rem;
+  font-family: var(--Primary-font);
+  border: var(--secondary-color) 3px solid;
+  opacity: 0.9;
+}
+.welcome h1 {
+  margin: 1rem auto;
+}
+/* Grid tiles for welcome page */
+.options-grid {
+  display: grid;
+  gap: 1rem;
+  margin: auto;
+  padding: 3rem 1rem;
+  width: fit-content;
+  grid-template-rows: repeat(3, 1fr);
+}
+.options-grid-item {
+  padding: 4rem;
+  font-family: var(--Primary-font);
+  cursor: pointer;
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+  border-radius: 0.5rem;
+  transition: all ease-in-out 0.2s;
+  opacity: 0.9;
+}
+.options-grid-item:hover {
+  transform: scale(1.1);
+  color: var(--dark-secondary-color);
+  opacity: 1;
+}
+/* REGISTRATION PAGE */
+.reg-form {
+  width: 95%;
+  height: 89rem;
+  margin: 2rem auto;
+  background: var(--primary-color);
+  border-radius: 0.5rem;
+  opacity: 0.9;
+}
+.reg-form .reg-tabs {
+  display: flex;
+}
+.reg-form .reg-tabs > div {
+  width: 50%;
+  height: 100%;
+  text-align: center;
+  color: var(--secondary-color);
+  font-family: var(--Primary-font);
+  padding: 2rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1rem;
+}
+.reg-form .reg-tabs.reg-tab-switch > div:nth-child(1),
+.reg-form .reg-tabs > div:nth-child(2) {
+  background: var(--secondary-color);
+  border-radius: 0.4rem;
+  color: var(--dark-secondary-color);
+  transition: all ease-in-out 0.3s;
+}
+.reg-form .reg-tabs.reg-tab-switch > div:nth-child(1):hover,
+.reg-form .reg-tabs > div:nth-child(2):hover {
+  background: var(--dark-secondary-color);
+  color: var(--secondary-color);
+}
+.reg-form .reg-tabs.reg-tab-switch > div:nth-child(2) {
+  background: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+.reg-form .reg-form-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 80%;
+}
+.reg-form .reg-form-wrapper > form {
+  position: absolute; /* This styling helps the javascript (regform-tabswitch) */
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s ease-in-out;
+}
+.reg-form .reg-form-wrapper > form.reg-student-form {
+  left: 0%;
+}
+.reg-form .reg-form-wrapper > form.reg-acstaff-form {
+  left: 100%;
+}
+.reg-form .reg-form-wrapper.active > form.reg-student-form {
+  left: -100%;
+}
+.reg-form .reg-form-wrapper.active > form.reg-acstaff-form {
+  left: 0%;
+}
+/* register form styling */
+.reg-form > div:first-child {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.reg-form > div:first-child h3 {
+  padding-left: 2rem;
+  font-size: 1.5rem;
+  color: var(--secondary-color);
+  font-family: var(--Primary-font);
+}
+
+.reg-student-form,
+.reg-acstaff-form {
+  padding: 1rem;
+}
+.reg-input-group label {
+  font-size: 1.3rem;
+  font-family: var(--Primary-font);
+  color: var(--secondary-color);
+}
+.reg-input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.2rem;
+}
+.reg-input-group input,
+.reg-input-group select {
+  padding: 0.65rem;
+  font-size: 1.4rem;
+  font-family: var(--secondary-font);
+  letter-spacing: 1px;
+  border: none;
+  outline: none;
+  border-radius: 0.2rem;
+  border: var(--dark-secondary-color) 0.2rem solid;
+  background-color: var(--secondary-color);
+  color: var(--dark-secondary-color);
+}
+.reg-input-group .buttonlight {
+  width: 50%;
+  margin: auto;
+  margin-top: 1rem;
+  padding: 0.8rem;
+  font-size: 1.5rem;
+  font-family: var(--Primary-font);
+}
+.reg-input-group input:focus {
+  background-color: white;
+}
+/* used in UNIT DETAIL, UNIT MANAGEMENT, USER ACCOUNT PAGES */
+.unit-details-grid {
+  display: grid;
+  grid-auto-flow: row;
+  gap: 2rem;
+  margin: 1rem 0;
+}
+.unit-details-grid-item {
+  background-color: var(--light-secondary-color);
+  color: var(--primary-color);
+  width: 90%;
+  margin: auto;
+  border-radius: 1rem;
+  padding: 1rem 0.7rem;
+  padding-bottom: 1.2rem;
+}
+.unit-details-grid-item h2 {
+  padding-left: 1rem;
+  padding-bottom: 0.6rem;
+}
+.unit-details-grid-item hr {
+  width: 97%;
+  margin: auto;
+  margin-bottom: 1rem;
+  background-color: var(--primary-color);
+  height: 2px;
+  border: none;
+  outline: none;
+}
+.unit-details-grid-item span {
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.5rem;
+  display: block;
+}
+.unit-details-grid-item h3 {
+  padding: 1rem;
+  padding-bottom: 0;
+  font-size: 1.3rem;
+}
+.unit-details-grid-item p {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+  text-align: justify;
+}
+.unit-details-grid-item a {
+  text-decoration: underline;
+  font-size: 1.2rem;
+}
+.unit-details-grid-item a:hover {
+  color: var(--dark-secondary-color);
+}
+/* UNIT ENROLLMENT & TUTORIAL ALLOCATION PAGE */
+.unit-enrollment-grid {
+  display: grid;
+  grid-auto-flow: row;
+  gap: 2rem;
+  margin: 1rem 0;
+}
+.unit-enrollment-grid-item {
+  background-color: var(--light-secondary-color);
+  color: var(--primary-color);
+  width: 90%;
+  margin: auto;
+  border-radius: 1rem;
+  padding: 1rem 0.7rem;
+  padding-bottom: 1.2rem;
+}
+.unit-enrollment-grid-item hr {
+  width: 97%;
+  margin: auto;
+  margin-bottom: 0.1rem;
+  background-color: var(--primary-color);
+  height: 2px;
+  border: none;
+  outline: none;
+}
+.unit-enrollment-grid-item .span-block,
+.unit-enrollment-grid-item span {
+  font-weight: bold;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+.span-block {
+  display: block;
+}
+.unit-enrollment-grid-item h3 {
+  padding: 1rem;
+  font-size: 1.3rem;
+}
+.unit-enrollment-grid .buttonlight {
+  display: inline;
+  border: 2px solid var(--primary-color);
+  padding: 0.2rem;
+}
+.unit-enrollment-grid-item input[type="checkbox"] {
+  width: 1.2rem;
+  height: 1.2rem;
+}

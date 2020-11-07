@@ -1,0 +1,68 @@
+#navigation-bar .container {
+  flex-direction: row;
+}
+nav img {
+  padding-top: 1rem;
+  margin-left: 2rem;
+}
+nav ul {
+  flex-direction: row;
+  margin: 0;
+  padding-top: 0;
+  padding-right: 2rem;
+}
+nav li {
+  margin-right: 2rem;
+  padding-top: 1rem;
+}
+nav li a::before {
+  content: "";
+  display: block;
+  height: 4px;
+  width: 0;
+  background-color: var(--secondary-color);
+  position: absolute;
+  top: 0;
+  transition: all ease-in-out 250ms;
+}
+nav li a:hover::before {
+  width: 100%;
+}
+.options-grid {
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: none;
+}
+.slidin-form {
+  width: 40%;
+  padding: 2rem;
+}
+.reg-form {
+  width: 50%;
+}
+.reg-input-group input,
+.reg-input-group select {
+  width: 90%;
+}
+.reg-form-wrapper {
+  margin-left: 1.4rem;
+}
+.reg-input-group .buttonlight {
+  margin-left: 5.8rem;
+}
+.unit-details-grid-item span {
+  display: inline;
+  padding-left: 1rem;
+}
+.span-block {
+  display: inline;
+}
+.unit-enrollment-grid-item .span-block {
+  padding-left: 1rem;
+}
+.unit-enrollment-grid-item hr {
+  margin-bottom: 1rem;
+}
+.unit-enrollment-grid-item input[type="checkbox"] {
+  width: 0.8rem;
+  height: 0.8rem;
+}
